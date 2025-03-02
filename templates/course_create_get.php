@@ -1,6 +1,7 @@
 <head>
     <title>TrainSkill-สร้างกิจกรรม</title>
 </head>
+
 <div class="container mt-4 content">
     <div class="card p-4">
         <form action="/course_create" method="post" enctype="multipart/form-data">
