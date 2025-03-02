@@ -184,7 +184,7 @@
             }
 
             function confirmAlright() {
-                return confirm("คุณแน่ใจแล้วใช่ไหมที่จะกดตกลง?");
+                return confirm("คุณแน่ใจแล้วใช่ไหมที่จะกดยอมรับ?");
             }
 
             function confirmReject() {
