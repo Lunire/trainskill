@@ -44,7 +44,7 @@ if (isset($_SESSION['timestamp'])) {
                                 <p class="card-text">จำกัดจำนวน: <?= $activity['max'] ?> คน</p>
                                 <a href="/course_participant?id=<?= $activity['course_id'] ?>" class="btn btn-info">ดูผู้เข้าร่วม</a>
                                 <a href="/course_edit?id=<?= $activity['course_id'] ?>" class="btn btn-primary">แก้ไข</a>
-                                <a href="/course_delete?id=<?= $activity['course_id'] ?>" class="btn btn-danger">ลบ</a>
+                                <a href="/course_delete?id=<?= $activity['course_id'] ?>" class="btn btn-danger" onclick="return confirmDelete()">ลบ</a>
                             </div>
                         </div>
                     </div>

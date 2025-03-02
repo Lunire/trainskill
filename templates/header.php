@@ -178,4 +178,16 @@
                 }
                 });
             });
+
+            function confirmDelete() {
+                return confirm("คุณแน่ใจแล้วใช่ไหมที่จะลบกิจกรรมนี้?");
+            }
+
+            function confirmAlright() {
+                return confirm("คุณแน่ใจแล้วใช่ไหมที่จะกดตกลง?");
+            }
+
+            function confirmReject() {
+                return confirm("คุณแน่ใจแล้วใช่ไหมที่จะกดปฏิเสธ?");
+            }
         </script>
