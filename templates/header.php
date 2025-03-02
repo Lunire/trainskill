@@ -1,3 +1,21 @@
+<?php
+$searchInput = isset($_GET['q']) ? $_GET['q'] : null;
+$courses = [];
+
+if ($searchInput) {
+    // ค้นหากิจกรรม
+    $result = searchCoursesWithSingleInput($searchInput);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $courses[] = $row;
+        }
+    }
+} else {
+    // หากไม่มีการค้นหา ให้ดึงข้อมูลกิจกรรมทั้งหมด
+    $courses = $data['courses']; // ข้อมูลกิจกรรมทั้งหมดจาก $data
+}
+?>
+
 <!DOCTYPE html>
 <html lang="th">
 
@@ -38,7 +56,7 @@
                         <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="ค้นหากิจกรรม">
+                        <input class="form-control me-2" type="search" name="q" placeholder="ค้นหากิจกรรม">
                         <button class="btn btn-outline-light" type="submit">ค้นหา</button>
                     </form>
                     <button class="btn btn-outline-light ms-2">
